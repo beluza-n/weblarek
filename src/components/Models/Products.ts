@@ -1,8 +1,9 @@
 import {IProduct} from '../../types';
 
 export class Products {
-    items: IProduct[] = [];
-    selected: IProduct | null = null;
+    protected items: IProduct[] = [];
+    protected selected: IProduct | null = null;
+    
     setItems(items: IProduct[]) {
         this.items = items;
     }

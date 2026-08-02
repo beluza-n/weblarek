@@ -1,7 +1,8 @@
 import { IApi, IOrder, IOrderResult, IProductsResponse } from '../../types';
 
 export class ShopApi {
-    api: IApi;
+    protected api: IApi;
+    
     constructor(api: IApi) {
         this.api = api
     }

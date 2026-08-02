@@ -1,7 +1,8 @@
 import {IProduct} from '../../types';
 
 export class Cart {
-    items: IProduct[] = [];
+    protected items: IProduct[] = [];
+
     getItems() {
         return this.items
     }
@@ -29,6 +30,7 @@ export class Cart {
     getCount() {
         return this.items.length
     }
+    
     hasItem(id: string) {
         return this.items.some((item) => item.id === id)
     }
