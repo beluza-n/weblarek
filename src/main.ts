@@ -65,4 +65,7 @@ shopApi.getProducts()
         // Сохранение массива в модели данных и вывод массива в консоль
         productsModel.setItems(data.items);
         console.log('Каталог с сервера:', productsModel.getItems());
+    })
+    .catch((error) => {
+        console.log('Ошибка загрузки товаров:', error);
     });
