@@ -6,14 +6,14 @@ export class Buyer {
     protected phone = '';
     protected address = '';
 
-    setData(data: Partial<IBuyer>) {
+    setData(data: Partial<IBuyer>): void {
         if (data.payment !== undefined) {this.payment = data.payment}
         if (data.email !== undefined) {this.email = data.email}
         if (data.phone !== undefined) {this.phone = data.phone}
         if (data.address !== undefined) {this.address = data.address}
     }
 
-    getData(): IBuyer {
+    getData() {
         return {
             payment: this.payment,
             email: this.email,
@@ -22,7 +22,7 @@ export class Buyer {
         }
     }
 
-    clear() {
+    clear(): void {
         this.payment = '';
         this.email = '';
         this.phone = '';

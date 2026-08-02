@@ -7,15 +7,15 @@ export class Cart {
         return this.items
     }
 
-    addItem(item: IProduct) {
+    addItem(item: IProduct): void {
         this.items.push(item)
     }
 
-    removeItem(id: string) {
+    removeItem(id: string): void {
         this.items = this.items.filter((product) => product.id !== id)
     }
 
-    clear() {
+    clear(): void {
         this.items = [];
     }
 
@@ -30,7 +30,7 @@ export class Cart {
     getCount() {
         return this.items.length
     }
-    
+
     hasItem(id: string) {
         return this.items.some((item) => item.id === id)
     }

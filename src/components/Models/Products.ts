@@ -3,8 +3,8 @@ import {IProduct} from '../../types';
 export class Products {
     protected items: IProduct[] = [];
     protected selected: IProduct | null = null;
-    
-    setItems(items: IProduct[]) {
+
+    setItems(items: IProduct[]): void {
         this.items = items;
     }
 
@@ -16,9 +16,10 @@ export class Products {
         return this.items.find((item) => item.id === id)
     }
 
-    setSelected(item: IProduct) {
+    setSelected(item: IProduct): void {
         this.selected = item
     }
+
     getSelected() {
         return this.selected
     }
