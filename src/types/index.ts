@@ -23,6 +23,8 @@ export interface IBuyer {
     address: string;
 }
 
+export type TBuyerErrors = Partial<Record<keyof IBuyer, string>>;
+
 // ответ сервера на гет-запрос {{baseUrl}}/product/
 export interface IProductsResponse {
     total: number;
