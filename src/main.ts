@@ -41,7 +41,7 @@ console.log('Количество после очистки:', cartModel.getCoun
 console.log('Данные покупателя (пусто):', buyerModel.getData());
 console.log('Ошибки валидации (пусто):', buyerModel.validate());
 
-buyerModel.setData({ payment: 'online' });
+buyerModel.setData({ payment: 'card' });
 console.log('После сохранения только payment:', buyerModel.getData());
 console.log('Ошибки, если заполнено одно поле payment:', buyerModel.validate());
 
