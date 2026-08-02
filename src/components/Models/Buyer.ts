@@ -1,10 +1,10 @@
 import {IBuyer, TPayment} from '../../types';
 
 export class Buyer {
-    payment: TPayment = '';
-    email = '';
-    phone = '';
-    address = '';
+    protected payment: TPayment = '';
+    protected email = '';
+    protected phone = '';
+    protected address = '';
 
     setData(data: Partial<IBuyer>) {
         if (data.payment !== undefined) {this.payment = data.payment}
