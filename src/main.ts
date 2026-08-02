@@ -3,6 +3,9 @@ import { Products } from './components/Models/Products';
 import { Cart } from './components/Models/Cart';
 import { Buyer } from './components/Models/Buyer';
 import { apiProducts } from './utils/data';
+import { Api } from './components/base/Api';
+import { API_URL } from './utils/constants';
+import { ShopApi } from './components/API/ShopApi';
 
 const productsModel = new Products();
 const cartModel = new Cart();
@@ -53,3 +56,12 @@ console.log('Ошибки валидации (все заполнено - не �
 buyerModel.clear();
 console.log('Данные покупателя после очистки:', buyerModel.getData());
 
+// проверка получения товаров с сервера
+const api = new Api(API_URL);
+const shopApi = new ShopApi(api);
+
+shopApi.getProducts()
+    .then((data) => {
+        productsModel.setItems(data.items);
+        console.log('Каталог с сервера:', productsModel.getItems());
+    })
