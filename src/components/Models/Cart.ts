@@ -20,11 +20,7 @@ export class Cart {
     }
 
     getTotal(): number {
-        let total = 0;
-        for (const item of this.items) {
-            if (item.price !== null) {total += item.price}
-        }
-        return total;
+        return this.items.reduce((total, item) => total + (item.price || 0), 0);
     }
 
     getCount(): number {
