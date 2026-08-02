@@ -160,7 +160,7 @@ hasItem(id: string): boolean — есть ли товар с таким id в к
 Конструктор: параметров не принимает.
 
 Поля класса:  
-payment: string — способ оплаты. card или cash
+payment: string — способ оплаты. online (Онлайн) или offline (При получении)
 email: string — электронная почта
 phone: string — телефон
 address: string — адрес
