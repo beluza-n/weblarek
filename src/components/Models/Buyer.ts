@@ -13,7 +13,7 @@ export class Buyer {
         if (data.address !== undefined) {this.address = data.address}
     }
 
-    getData() {
+    getData(): IBuyer {
         return {
             payment: this.payment,
             email: this.email,

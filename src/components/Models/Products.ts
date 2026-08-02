@@ -8,11 +8,11 @@ export class Products {
         this.items = items;
     }
 
-    getItems() {
+    getItems(): IProduct[] {
         return this.items
     }
 
-    getItem(id: string) {
+    getItem(id: string): IProduct | undefined {
         return this.items.find((item) => item.id === id)
     }
 
@@ -20,7 +20,7 @@ export class Products {
         this.selected = item
     }
 
-    getSelected() {
+    getSelected(): IProduct | null {
         return this.selected
     }
 }

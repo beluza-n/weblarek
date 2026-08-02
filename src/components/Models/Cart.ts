@@ -3,7 +3,7 @@ import {IProduct} from '../../types';
 export class Cart {
     protected items: IProduct[] = [];
 
-    getItems() {
+    getItems(): IProduct[] {
         return this.items
     }
 
@@ -19,7 +19,7 @@ export class Cart {
         this.items = [];
     }
 
-    getTotal() {
+    getTotal(): number {
         let total = 0;
         for (const item of this.items) {
             if (item.price !== null) {total += item.price}
@@ -27,11 +27,11 @@ export class Cart {
         return total;
     }
 
-    getCount() {
+    getCount(): number {
         return this.items.length
     }
 
-    hasItem(id: string) {
+    hasItem(id: string): boolean {
         return this.items.some((item) => item.id === id)
     }
 }
