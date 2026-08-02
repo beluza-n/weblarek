@@ -22,3 +22,21 @@ export interface IBuyer {
     phone: string;
     address: string;
 }
+
+// ответ сервера на гет-запрос {{baseUrl}}/product/
+export interface IProductsResponse {
+    total: number;
+    items: IProduct[];
+}
+
+// тело пост-запроса на /order/ — данные покупателя + сумма и id товаров
+export interface IOrder extends IBuyer {
+    total: number;
+    items: string[];
+}
+
+// ответ сервера на пост-запрос на /order/
+export interface IOrderResult {
+    id: string;
+    total: number;
+}
