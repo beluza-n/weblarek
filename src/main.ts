@@ -56,12 +56,13 @@ console.log('Ошибки валидации (все заполнено - не �
 buyerModel.clear();
 console.log('Данные покупателя после очистки:', buyerModel.getData());
 
-// проверка получения товаров с сервера
+// Запрос к серверу за объектом с данными каталога
 const api = new Api(API_URL);
 const shopApi = new ShopApi(api);
 
 shopApi.getProducts()
     .then((data) => {
+        // Сохранение массива в модели данных и вывод массива в консоль
         productsModel.setItems(data.items);
         console.log('Каталог с сервера:', productsModel.getItems());
-    })
+    });
